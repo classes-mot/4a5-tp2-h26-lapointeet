@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  password: { type: String, required: true },
+  jeux: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "Jeu",
+    },
+  ],
+});
+
+export const User = mongoose.model("User", userSchema);
