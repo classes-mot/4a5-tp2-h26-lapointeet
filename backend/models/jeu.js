@@ -7,8 +7,8 @@ const jeuSchema = new mongoose.Schema({
   duree: { type: Number, required: true },
   assignee: {
     type: mongoose.Types.ObjectId,
-    ref: "User",
     required: true,
+    ref: "User",
   },
 });
 

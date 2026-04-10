@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   jeux: [
     {
       type: mongoose.Types.ObjectId,
+      required: true,
       ref: "Jeu",
     },
   ],

@@ -9,8 +9,6 @@ router.get("/", jeuxController.getJeux);
 
 router.get("/:id", jeuxController.getJeuById);
 
-router.get("/:id", jeuxController.getJeuxByUserId);
-
 router.use(checkAuth);
 
 router.post(
