@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "a17db4dc-5845-4eb8-8208-390a80320d2f",
+    "name": "TP2_lapointeet",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42477131"
+  },
+  "item": [
+    {
+      "name": "/api/jeux",
+      "item": [
+        {
+          "name": "Add Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MDk3MzM5NWJjYmE1Y2FhOTY0MjEiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3NzU4MzU5ODgsImV4cCI6MTc3NTgzOTU4OH0.pnJGF9Bk-jO6Zpz80fx9sB9lFjfbhw3FRz1gr6D8BmM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nom\":\"GameTest37\",\r\n    \"categorie\":\"multiplayer\",\r\n    \"joueurs\":6,\r\n    \"duree\":60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Jeux",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Jeu (ID)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux/69d91b62a8514356afdbc668",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "69d91b62a8514356afdbc668"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "MAJ Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MDk3MzM5NWJjYmE1Y2FhOTY0MjEiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3NzU4MzU5ODgsImV4cCI6MTc3NTgzOTU4OH0.pnJGF9Bk-jO6Zpz80fx9sB9lFjfbhw3FRz1gr6D8BmM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nom\":\"GameTest37\",\r\n    \"categorie\":\"singleplayer\",\r\n    \"joueurs\":1,\r\n    \"duree\":60\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux/69d91b62a8514356afdbc668",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "69d91b62a8514356afdbc668"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MDk3MzM5NWJjYmE1Y2FhOTY0MjEiLCJuYW1lIjoidXNlcjEiLCJpYXQiOjE3NzU4MzU5ODgsImV4cCI6MTc3NTgzOTU4OH0.pnJGF9Bk-jO6Zpz80fx9sB9lFjfbhw3FRz1gr6D8BmM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/jeux/69d91b62a8514356afdbc668",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "jeux",
+                "69d91b62a8514356afdbc668"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/api/users",
+      "item": [
+        {
+          "name": "Inscription (USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"user1\",\r\n    \"password\":\"pass1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Connexion (USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"user1\",\r\n    \"password\":\"pass1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/users/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
